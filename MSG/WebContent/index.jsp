@@ -14,6 +14,11 @@
 }
 </style>
 
+<<<<<<< HEAD
 <div class="layer"><p>여기에 이름을 쓰세요 - 승환,원호,민희,선일,헌준,지준</p></div>
     <!-- 내꺼 -->
+=======
+<div class="layer"><p>지준</p></div>
+    
+>>>>>>> branch 'easyjun' of https://github.com/ISeeTheFuture/MSG.git
 <%@ include file="/WEB-INF/views/common/footer.jsp" %>	
