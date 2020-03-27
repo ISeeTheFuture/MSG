@@ -1,0 +1,13 @@
+insert into vctn_tb values(1,189,21,41,sysdate);
+insert into vctn_tb values(2,200,20,31,sysdate);
+insert into vctn_tb values(3,202,31,21,sysdate);
+
+commit;
+select * from vctn_tb;
+
+select 
+			* 
+		from 
+			vctn_tb 
+		order by 
+			vctn_no desc;
