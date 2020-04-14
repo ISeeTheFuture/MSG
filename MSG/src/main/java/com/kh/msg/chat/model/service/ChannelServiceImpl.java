@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.kh.msg.board.model.vo.Board;
 import com.kh.msg.chat.model.dao.ChannelDAO;
 import com.kh.msg.chat.model.vo.ChannelInfo;
 import com.kh.msg.chat.model.vo.ChannelMember;
@@ -86,6 +87,12 @@ public class ChannelServiceImpl implements ChannelService {
 	@Override
 	public int modifyChannel(ChannelInfo chInfo) {
 		return channelDAO.modifyChannel(chInfo);
+	}
+
+	@Override
+	public List<Board> mainBoardList() {
+		// TODO Auto-generated method stub
+		return channelDAO.mainBoardList();
 	}
 
 

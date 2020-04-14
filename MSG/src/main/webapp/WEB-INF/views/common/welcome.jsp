@@ -33,6 +33,11 @@
 }
 </style>
 <script>
+	function view(no, empNo, memberEmpno){
+		location.href="${pageContext.request.contextPath}/board/view.do?boardNo="+no+"&empNo="+empNo+"&memberEmpno="+memberEmpno;
+		
+	}
+
 </script>
 <body>
 <%@ include file="/WEB-INF/views/common/header.jsp" %>
@@ -58,9 +63,9 @@
                                 <th>제목</th>
                                 
                             </tr>
-                            <c:forEach items="${boardList }" var="bl">
-	                            <tr>
-	                                <td>${bl.empNo }</td>
+                            <c:forEach begin="0" end="5" items="${boardList }" var="bl">
+	                            <tr onClick="view('${bl.no}', '${bl.empNo }', '${memberLoggedIn.empNo }');" style="cursor:pointer;">
+	                                <td>${bl.empName }</td>
 	                                <td>${bl.bdate }</td>
 	                                <td>${bl.title }</td>
 	                            </tr>

@@ -43,7 +43,7 @@ public class DirectMsgController {
 	@ResponseBody
 	@GetMapping("/headerDmList.do")
 	public void headerDmList(HttpSession session, HttpServletResponse response,  Model model) {
-		
+
 		try {
 			List<LoginVO> userList= MemberController.userList;
 			
@@ -87,8 +87,6 @@ public class DirectMsgController {
 			n.printStackTrace();
 		}
 	}
-	
-	
 	
 	@PostMapping("/msgInsert.do")
 	public void directMsginsert(@RequestParam("toId") String toId,

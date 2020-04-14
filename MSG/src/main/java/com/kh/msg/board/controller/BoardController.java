@@ -34,6 +34,8 @@ import com.kh.msg.board.model.vo.BoardPagingVo;
 import com.kh.msg.board.model.vo.BoardRead;
 import com.kh.msg.board.model.vo.BoardScrap;
 import com.kh.msg.board.model.vo.Comment;
+import com.kh.msg.board.model.vo.DeptVo;
+import com.kh.msg.board.model.vo.JobVo;
 import com.kh.msg.common.util.Utils;
 import com.kh.msg.member.controller.MemberController;
 import com.kh.msg.member.model.vo.LoginVO;
@@ -170,6 +172,7 @@ public class BoardController {
 		log.debug("board================"+board);
 		comment.setBrdNo(boardNo);
 		int countComment = boardService.countComment(comment);
+		
 		model.addAttribute("countComment", countComment);
 		model.addAttribute("boardScrap", boardScrap);
 		model.addAttribute("boardRead", boardRead);
@@ -223,7 +226,6 @@ public class BoardController {
 	public String summer() {
 		return "board/summerNote";
 	}
-	
 	
 	@GetMapping("/write.do")
 	public String write() {
@@ -431,6 +433,7 @@ public class BoardController {
     	} else if (cntPerPage == null) { 
     		cntPerPage = "15";
     	}
+    	
     	List<BoardRead> readList = boardService.selectReadList();
     	
     	

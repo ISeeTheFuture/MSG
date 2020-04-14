@@ -3,6 +3,7 @@ package com.kh.msg.chat.model.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.kh.msg.board.model.vo.Board;
 import com.kh.msg.chat.model.vo.ChannelInfo;
 import com.kh.msg.chat.model.vo.ChannelMember;
 import com.kh.msg.chat.model.vo.ChannelMsg;
@@ -33,6 +34,8 @@ public interface ChannelDAO {
 	int deleteChannelMember(int chNo);
 	
 	int modifyChannel(ChannelInfo chInfo);
+
+	List<Board> mainBoardList();
 
 	
 

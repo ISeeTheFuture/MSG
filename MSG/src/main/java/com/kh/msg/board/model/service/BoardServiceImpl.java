@@ -8,10 +8,12 @@ import org.springframework.stereotype.Service;
 import com.kh.msg.board.model.dao.BoardDAO;
 import com.kh.msg.board.model.vo.Attachment;
 import com.kh.msg.board.model.vo.Board;
+import com.kh.msg.board.model.vo.BoardPagingVo;
 import com.kh.msg.board.model.vo.BoardRead;
 import com.kh.msg.board.model.vo.BoardScrap;
 import com.kh.msg.board.model.vo.Comment;
-import com.kh.msg.board.model.vo.BoardPagingVo;
+import com.kh.msg.board.model.vo.DeptVo;
+import com.kh.msg.board.model.vo.JobVo;
 import com.kh.msg.member.model.vo.Member;
 
 @Service
@@ -235,6 +237,18 @@ public class BoardServiceImpl implements BoardService{
 	public List<Member> userLogin() {
 		// TODO Auto-generated method stub
 		return boardDAO.userLogin();
+	}
+
+	@Override
+	public List<JobVo> jobVo() {
+		// TODO Auto-generated method stub
+		return boardDAO.jobVo();
+	}
+
+	@Override
+	public List<DeptVo> deptVo() {
+		// TODO Auto-generated method stub
+		return boardDAO.deptVo();
 	}
 
 	

@@ -13,6 +13,8 @@ import com.kh.msg.board.model.vo.Board;
 import com.kh.msg.board.model.vo.BoardRead;
 import com.kh.msg.board.model.vo.BoardScrap;
 import com.kh.msg.board.model.vo.Comment;
+import com.kh.msg.board.model.vo.DeptVo;
+import com.kh.msg.board.model.vo.JobVo;
 import com.kh.msg.board.model.vo.BoardPagingVo;
 import com.kh.msg.member.model.vo.Member;
 
@@ -207,5 +209,17 @@ public class BoardDAOImpl implements BoardDAO {
 	public List<Member> userLogin() {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList("board.userLogin");
+	}
+
+	@Override
+	public List<JobVo> jobVo() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("board.jobVo");
+	}
+
+	@Override
+	public List<DeptVo> deptVo() {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList("board.deptVo");
 	}
 }

@@ -289,4 +289,5 @@
 			 emp_tb E left join job_tb j
 		        on E.job_cd = j.job_cd
 	</select>
+	
 </mapper>

@@ -108,4 +108,12 @@
 							  ch_ex = #{chEx} 
 		where ch_no = #{chNo}
 	</update>
+	
+	<select id="mainBoardList" resultType="Board">
+		select *
+          from brd_tb B left join emp_tb E 
+          on B.emp_no = E.emp_no 
+          where B.catag like '%'||'공지,행사'||'%'
+          order by B.no desc
+	</select>
 </mapper>

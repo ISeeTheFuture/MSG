@@ -7,6 +7,8 @@ import com.kh.msg.board.model.vo.Board;
 import com.kh.msg.board.model.vo.BoardRead;
 import com.kh.msg.board.model.vo.BoardScrap;
 import com.kh.msg.board.model.vo.Comment;
+import com.kh.msg.board.model.vo.DeptVo;
+import com.kh.msg.board.model.vo.JobVo;
 import com.kh.msg.board.model.vo.BoardPagingVo;
 import com.kh.msg.member.model.vo.Member;
 
@@ -73,5 +75,9 @@ public interface BoardDAO {
 	int countComment(Comment comment);
 
 	List<Member> userLogin();
+
+	List<JobVo> jobVo();
+
+	List<DeptVo> deptVo();
 
 }
